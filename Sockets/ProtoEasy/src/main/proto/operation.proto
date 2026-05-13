@@ -1,0 +1,26 @@
+syntax = "proto2";
+package operation;
+
+option java_package = "buffers";
+option java_outer_classname = "OperationProtos";
+
+enum Type {
+  ECHO = 1;
+  ADD = 2;
+  ADDMANY = 3;
+}
+
+message Request {
+  optional Type type = 2;
+  optional string message = 1;
+  optional int32 num1 = 3;
+  optional int32 num2 = 4;
+  repeated int32 nums = 5;
+}
+
+message Response {
+  optional Type type = 2;
+  optional string response = 1;
+  optional int32 result =3;
+}
+
