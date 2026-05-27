@@ -42,6 +42,8 @@ public class Fraction {
          // create a new instance
          // Fraction *frac = [[Fraction alloc] init];
          Fraction frac = new Fraction();
+         int num   = (args.length >= 1) ? Integer.parseInt(args[0]) : 1;
+         int denom = (args.length >= 2) ? Integer.parseInt(args[1]) : 3;
 
          // set the values
          frac.setNumerator(1);
